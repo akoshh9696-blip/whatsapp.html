@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <title>WhatsApp Button</title>
-
 <style>
 /* ПЛЫВАЮЩАЯ КНОПКА WHATSAPP */
 .whatsapp-float {

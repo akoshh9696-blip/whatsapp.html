@@ -2,70 +2,93 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>WhatsApp Button</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhatsApp Order</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
   <style>
-    /* ПЛЫВАЮЩАЯ КНОПКА WHATSAPP */
-    .whatsapp-float {
-      position: fixed;        /* фикс по экрану */
-      bottom: 20px;           /* отступ снизу */
-      right: 20px;            /* отступ справа */
-      width: 56px;
-      height: 56px;
+    /* КРАСИВАЯ КНОПКА WHATSAPP */
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
       background-color: #25D366;
-      color: #fff;
-      border-radius: 50%;
-      text-align: center;
-      line-height: 56px;
-      font-size: 28px;
+      color: white;
       text-decoration: none;
-      z-index: 999999;
-      box-shadow: 0 4px 10px rgba(0,0,0,.3);
+      padding: 12px 20px;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      font-size: 16px;
+      box-shadow: 2px 4px 15px rgba(0,0,0,0.2);
+      z-index: 10000;
+      transition: all 0.3s ease;
+      animation: pulse-green 2s infinite; /* Эффект пульсации */
+    }
+
+    .whatsapp-btn i {
+      font-size: 24px;
+      margin-right: 10px;
+    }
+
+    .whatsapp-btn:hover {
+      transform: scale(1.05);
+      background-color: #20ba5a;
+    }
+
+    /* Анимация пульсации */
+    @keyframes pulse-green {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+      70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+
+    /* ГАЛЕРЕЯ ДЛЯ МОБИЛЬНЫХ */
+    .mobile-gallery {
+      display: none; /* Скрыто на ПК */
+    }
+
+    @media (max-width: 768px) {
+      .mobile-gallery {
+        display: block;
+        padding: 12px;
+        margin-bottom: 80px; /* Чтобы кнопка не закрывала последнее фото */
+      }
+
+      .mobile-gallery img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin-bottom: 15px;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <a href="https://wa.me/77011234567" target="_blank" class="whatsapp-float">
-    💬
+  <a href="https://wa.me/77011234567" target="_blank" class="whatsapp-btn">
+    <i class="fab fa-whatsapp"></i>
+    <span>Тапсырыс беру</span>
   </a>
-<!-- БЛОК С ФОТО (ТОЛЬКО МОБИЛЬНЫЕ) -->
-<div class="mobile-gallery">
-  <img src="/whatsapp.html/10.jpeg" alt="">
-  <img src="/whatsapp.html/9.jpeg" alt="">
-  <img src="/whatsapp.html/8.jpeg" alt="">
-  <img src="/whatsapp.html/7.jpeg" alt="">
-  <img src="/whatsapp.html/6.jpeg" alt="">
-  <img src="/whatsapp.html/5.jpeg" alt="">
-  <img src="/whatsapp.html/4.jpeg" alt="">
-  <img src="/whatsapp.html/3.jpeg" alt="">
-  <img src="/whatsapp.html/2.jpeg" alt="">
-  <img src="/whatsapp.html/1.jpeg" alt="">
-</div>
 
-<style>
-/* ПО УМОЛЧАНИЮ СКРЫТО */
-.mobile-gallery {
-  display: none;
-}
-
-/* ТОЛЬКО МОБИЛЬНЫЕ */
-@media (max-width: 768px) {
-  .mobile-gallery {
-    display: block;
-    padding: 12px;
-  }
-
-  .mobile-gallery img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 12px; /* расстояние между фото */
-    border-radius: 10px; /* мягкие углы */
-  }
-}
-</style>
+  <div class="mobile-gallery">
+    <img src="/whatsapp.html/10.jpeg" alt="Фото 10">
+    <img src="/whatsapp.html/9.jpeg" alt="Фото 9">
+    <img src="/whatsapp.html/8.jpeg" alt="Фото 8">
+    <img src="/whatsapp.html/7.jpeg" alt="Фото 7">
+    <img src="/whatsapp.html/6.jpeg" alt="Фото 6">
+    <img src="/whatsapp.html/5.jpeg" alt="Фото 5">
+    <img src="/whatsapp.html/4.jpeg" alt="Фото 4">
+    <img src="/whatsapp.html/3.jpeg" alt="Фото 3">
+    <img src="/whatsapp.html/2.jpeg" alt="Фото 2">
+    <img src="/whatsapp.html/1.jpeg" alt="Фото 1">
+  </div>
 
 </body>
 </html>

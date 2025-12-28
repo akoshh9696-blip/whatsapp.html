@@ -30,6 +30,42 @@
   <a href="https://wa.me/77011234567" target="_blank" class="whatsapp-float">
     💬
   </a>
+<!-- БЛОК С ФОТО (ТОЛЬКО МОБИЛЬНЫЕ) -->
+<div class="mobile-gallery">
+  <img src="1.jpeg" alt="">
+  <img src="2.jpeg" alt="">
+  <img src="3.jpeg" alt="">
+  <img src="4.jpeg" alt="">
+  <img src="5.jpeg" alt="">
+  <img src="6.jpeg" alt="">
+  <img src="7.jpeg" alt="">
+  <img src="8.jpeg" alt="">
+  <img src="9.jpeg" alt="">
+  <img src="10.jpeg" alt="">
+</div>
+
+<style>
+/* ПО УМОЛЧАНИЮ СКРЫТО */
+.mobile-gallery {
+  display: none;
+}
+
+/* ТОЛЬКО МОБИЛЬНЫЕ */
+@media (max-width: 768px) {
+  .mobile-gallery {
+    display: block;
+    padding: 12px;
+  }
+
+  .mobile-gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 12px; /* расстояние между фото */
+    border-radius: 10px; /* мягкие углы */
+  }
+}
+</style>
 
 </body>
 </html>
